@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/jquery.slides.min.js"></script>
+		<script type="text/javascript">
+		
+			function nexeinter(){
+					window.location.href = "xuantu.html"
+				
+			}
+			$(function() {
+				$("#div111").slidesjs({
+					start: 1,
+					navigation: {
+						active: false,
+						　　
+						effect: "slide"　　
+					},
+					play: {
+						active: true,
+						effect: "slide",
+						interval: 2500,
+						auto: true,
+						swap: false,
+						pauseOnHover: false,
+						restartDelay: 200,
+						　　
+					},
+				});
+			});
+		</script>
+		<style>
+			#div111 img {
+				position: absolute;
+				height: 120%;
+				width: 100%;
+				z-index: 10;
+			}
+			
+			#div122 {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#div111 {
+				position: absolute;
+				height: 90%;
+				width: 80%;
+				left: 10%;
+				top: 3%;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="div">
+
+			<div id="div1">
+				<div id="div11">
+					<div id="div111">
+						<img src="img/5.jpg" />
+						<img src="img/6.jpg" />
+						<img src="img/3.jpg" />
+						<img src="img/4.jpg" />
+					</div>
+
+				</div>
+			</div>
+			<div id="div2" style="text-align: center;">
+				<input type="button" id="btn1" value="制作大东新年贺卡" onclick="nexeinter()" />
+			</div>
+			<div id="div3" style="text-align: center;">
+				<a id="p1">策划： 市场部 研发：何佳伦 </a>
+			</div>
+		</div>
+
+	</body>
+
+</html>
