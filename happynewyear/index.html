@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/jquery.slides.min.js"></script>
+		<script type="text/javascript">
+		//微信分享接口
+wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: "", // 必填，公众号的唯一标识
+        timestamp: "" , // 必填，生成签名的时间戳
+        nonceStr: "", // 必填，生成签名的随机串
+        signature: "",// 必填，签名，见附录1
+        //jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone','startRecord','stopRecord','onVoiceRecordEnd','playVoice','pauseVoice','stopVoice','onVoicePlayEnd','uploadVoice','downloadVoice','chooseImage','previewImage','uploadImage','downloadImage','translateVoice','getNetworkType','openLocation','getLocation','hideOptionMenu','showOptionMenu','hideMenuItems','showMenuItems','hideAllNonBaseMenuItem','showAllNonBaseMenuItem','closeWindow','scanQRCode','chooseWXPay','openProductSpecificView','addCard','chooseCard','openCard'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+wx.ready(function(){
+    //分享朋友圈
+    wx.onMenuShareTimeline({
+        title:  "见鬼了,1块钱竟可以买这么多!", // 分享标题
+        link: "index.html", // 分享链接
+        imgUrl: "img/1.jpeg", // 分享图标
+        success: function () {
+            
+        },
+        cancel: function () {
+        }
+    });
+    //分享朋友
+    wx.onMenuShareAppMessage({
+        title:  "见鬼了,1块钱竟可以买这么多!", // 分享标题
+        link: "index.html", // 分享链接
+        imgUrl: "img/1.jpeg", // 分享图标
+		desc:"东软睿道内部课程大公开",
+        success: function () {
+            
+        },
+        cancel: function () {
+        }
+    });
+});
+			function nexeinter(){
+					window.location.href = "xuantu.html"
+				
+			}
+			$(function() {
+				$("#div111").slidesjs({
+					start: 1,
+					navigation: {
+						active: false,
+						　　
+						effect: "slide"　　
+					},
+					play: {
+						active: true,
+						effect: "slide",
+						interval: 2500,
+						auto: true,
+						swap: false,
+						pauseOnHover: false,
+						restartDelay: 200,
+						　　
+					},
+				});
+			});
+		</script>
+		<style>
+			#div111 img {
+				position: absolute;
+				height: 120%;
+				width: 100%;
+				z-index: 10;
+			}
+			
+			#div122 {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#div111 {
+				position: absolute;
+				height: 90%;
+				width: 80%;
+				left: 10%;
+				top: 3%;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="div">
+
+			<div id="div1">
+				<div id="div11">
+					<div id="div111">
+						<img src="img/5.jpg" />
+						<img src="img/6.jpg" />
+						<img src="img/3.jpg" />
+						<img src="img/4.jpg" />
+					</div>
+
+				</div>
+			</div>
+			<div id="div2" style="text-align: center;">
+				<input type="button" id="btn1" value="制作大东新年贺卡" onclick="nexeinter()" />
+			</div>
+			<div id="div3" style="text-align: center;">
+				<a id="p1">策划： 市场部 研发：何佳伦 </a>
+			</div>
+		</div>
+
+	</body>
+
+</html>
